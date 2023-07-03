@@ -1,13 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--------------------------HEADER-------------------------->
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=chrome">
 	<meta name="viewport" content="width=device-width", initial-scale="1.0">
-	<title>Jinxiu Yao</title>
+	<title>Jinxiu Yao Portfolio</title>
+	<link rel="stylesheet" href="../css/style.css">
 </head>
+
+<!--------------------------BODY-------------------------->
 <body>
-	<h1>WORK IN PROGRESS</h1>
-	<h2>THANKS!</h2>
+	<!--------------------------NAVBAR-------------------------->
+	<div id="header">
+		<div class="container">
+			<nav>
+				<img src="../asset/img/logo.png" class="header-logo">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About Me</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<!--Portfolio has multiple pages
+					and each page should have reflections-->
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="header-text">
+				<p>Full-Stack Developer</p>
+				<h1>Hi, my name is <span>Jinxiu</span> Yao</h1>
+			</div>
+		</div>
+	</div>
+	<!--------------------------ABOUT-------------------------->
+	<div id="about">
+		<div class="container">
+			<div class="about-row-1">
+				<div class="about-col-1">
+					<img src="../asset/img/user.png">
+				</div>
+				<div class="about-col-2">
+					<h1 class="about-title">About Me</h1>
+					<!--ABOUT ME SUMMARY-->
+					<p>
+						<br>
+						A collaborative challenger who is eager to deliver software products 
+						of maximised quality.
+						<br>
+						<br>
+						Possesses professional interpersonal skills and has a proactive mind 
+						to tackle problems of any scale.
+						<br>
+						<br>
+						Enjoys being a part of a results-driven environment and thrives 
+						in tandem with a successful team.
+						<br>
+					</p>
+					<!--OTHER SECTIONS: SKILLS EXPERIENCE QUALIFICATIONS-->
+					<div class="about-subtitles">
+						<p class="about-subtitles-link about-active-subtitle-link" 
+							onclick="opentab('about-skills')">
+							Skills
+						</p>
+						<p class="about-subtitles-link" 
+							onclick="opentab('about-experience')">
+							Experience
+						</p>
+						<p class="about-subtitles-link" 
+							onclick="opentab('about-qualifications')">
+							Qualifications
+						</p>
+					</div>
+					<!--SKILLS CONTENT-->
+					<div class="about-subtitles-content about-active-subtitle-content" 
+						id="about-skills">
+						<ul>
+							<li><span>Full-Stack</span><br>
+								C C++ Python Rust Bash JavaScript HTML CSS PHP
+							</li>
+							<li><span>DevOps</span><br>
+								Docker
+							</li>
+							<li><span>Web Development</span><br>
+								React Tailwind Node Ruby-on-Rails
+							</li>
+							<li><span>Software Development</span><br>
+								Flutter UE5
+							</li>
+						</ul>
+					</div>
+					<!--EXPERIENCE CONTENT-->
+					<div class="about-subtitles-content"
+						id="about-experience">
+						<ul>
+							<li><span>Transcendence</span><br>
+								42 Network Project: Website with real time chat and 
+								online multiplayer implementation of pong game.
+							</li>
+							<li><span>Inception</span><br>
+								42 Network Project: Mastering DevOps using Docker
+							</li>
+							<li><span>IRC</span><br>
+								42 Network Project: Creating the backend of an online chat server 
+								similar to Discord, WhatsApp related modern day chatting platforms
+							</li>
+							<li><span>Containers</span><br>
+								42 Network Project: Implementation of the C++ <pre>&ltcontainers&gt</pre> STL to develop knowledge in advanced algorithms
+							</li>
+						</ul>
+					</div>
+					<!--EDUCATION CONTENT-->
+					<div class="about-subtitles-content"
+						id="about-qualifications">
+						<ul>
+							<li><span>2023</span><br>
+								42 Network: Common Core in Full-Stack Development
+							</li>
+							<li><span>2021</span><br>
+								TU Delft: BE in CS&E
+							</li>
+							<li><span>2020</span><br>
+								A Levels (A*A*A*A*): F-Maths, Maths, Physics, Chemistry
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var about_subtitles_links = document.getElementsByClassName("about-subtitles-link");
+			var about_subtitles_contents = document.getElementsByClassName("about-subtitles-content");
+		
+			function opentab(about_subtitle) {
+				for (link of about_subtitles_links)
+				{
+					link.classList.remove("about-active-subtitle-link");
+				}
+				for (content of about_subtitles_contents)
+				{
+					content.classList.remove("about-active-subtitle-content");
+				}
+				event.currentTarget.classList.add("about-active-subtitle-link");
+				document.getElementById(about_subtitle).classList.add("about-active-subtitle-content");
+			}
+		</script>
+	</div>
+	<!--------------------------PORTFOLIO-------------------------->
 </body>
+
 </html>
