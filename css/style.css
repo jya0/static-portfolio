@@ -10,7 +10,7 @@ body {
 	color: #fff;
 }
 
-/*-----------HEADER------------*/
+/*----------------------HEADER-----------------------*/
 #header {
 	width: 100%;
 	height: 100vh;
@@ -78,6 +78,7 @@ nav ul li a:hover::after {
 	color: #ff004f;
 }
 
+/*----------------------ABOUT-----------------------*/
 #about {
 	padding: 10% 0;
 	color: #ababab;
@@ -102,7 +103,7 @@ nav ul li a:hover::after {
 	flex-basis: 50%;
 }
 
-.about-title {
+.section-title {
 	font-size: xxx-large;
 	font-weight: 600;
 	color: #fff;
@@ -157,4 +158,175 @@ nav ul li a:hover::after {
 
 .about-subtitles-content.about-active-subtitle-content {
 	display: block;
+}
+
+/*----------------------PORTFOLIO-----------------------*/
+#portfolio {
+	padding: 0 0;
+}
+
+.portfolio-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 40px;
+	margin-top: 50px;
+}
+
+.portfolio-project {
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio-project img {
+	width: 100%;
+	border-radius: 10px;
+	display: block;
+	transition: transform 0.5s;
+}
+
+.portfolio-project-layer {
+	width: 100%;
+	height: 0;
+	background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+	border-radius: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	font-size: medium;
+	transition: height 0.5s;
+
+}
+
+.portfolio-project-layer h3 {
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.portfolio-project-layer a {
+	margin-top: 20px;
+	color: #ff004f;
+	text-decoration: none;
+	font-size: larger;
+	line-height: 60px;
+	background-color: #fff;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.portfolio-project:hover img {
+	transform: scale(1.1);
+}
+
+.portfolio-project:hover .portfolio-project-layer {
+	height: 100%;
+}
+
+.my-btn {
+	display: block;
+	margin: 50px auto;
+	width: fit-content;
+	border: 1px solid #ff004f;
+	padding: 14px 50px;
+	border-radius: 6px;
+	text-decoration: none;
+	color: #fff;
+	transition: background 0.5s;
+}
+
+.my-btn:hover {
+	background: #ff004f;
+}
+
+
+/*----------------------CONTACT-----------------------*/
+
+.contact-row-1 {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.contact-col-1 {
+	flex-basis: 35%;
+}
+
+.contact-col-2 {
+	flex-basis: 60%;
+}
+
+.contact-col-1 p {
+	margin-top: 30px;
+}
+
+.contact-col-1 p i {
+	color: #ff004f;
+	margin-right: 15px;
+	font-size: large;
+}
+
+.social-icons {
+	margin: 30px 0;
+}
+
+.social-icons a {
+	text-decoration: none;
+	font-size: xxx-large;
+	margin-right: 15px;
+	color: #ababab;
+	display: inline-block;
+	transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+	color: #ff004f;
+	transform: translateY(-5px);
+}
+
+.my-btn-skin {
+	display: inline-block;
+	background: #ff004f;
+}
+
+.contact-col-2 form {
+	width: 100%;
+}
+
+form input, form textarea {
+	width: 100%;
+	border: 0;
+	outline: none;
+	background: #262626;
+	padding: 15px;
+	margin: 15px 0;
+	color: #fff;
+	font-size: regular;
+	border-radius: 6px;
+}
+
+form .my-btn-skin {
+	padding: 14px 60px;
+	font-size: 18px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.copyright {
+	width: 100%;
+	text-align: center;
+	padding: 25px 0;
+	margin-top: 20px;
+}
+
+.copyright i {
+	color: #ff004f
 }
