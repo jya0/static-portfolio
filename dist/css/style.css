@@ -5,6 +5,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: #080808;
 	color: #fff;
@@ -80,7 +84,8 @@ nav ul li a:hover::after {
 
 /*----------------------ABOUT-----------------------*/
 #about {
-	padding: 10% 0;
+	padding: 0 0;
+	margin-top: 15%;
 	color: #ababab;
 }
 
@@ -160,9 +165,56 @@ nav ul li a:hover::after {
 	display: block;
 }
 
+/*----------------------SERVICES-----------------------*/
+#services {
+	padding: 0 0;
+	margin-top: 5%;
+}
+
+.services-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 40px;
+	margin-top: 50px;
+}
+
+.services-list div {
+	background: #262626;
+	padding: 40px;
+	font-size: medium;
+	font-weight: 300;
+	border-radius: 10px;
+	transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+	font-size: xxx-large;
+	margin-bottom: 30px;
+}
+
+.services-list div h2 {
+	font-size: xx-large;
+	font-weight: 500;
+	margin-bottom: 15px;
+}
+
+.services-list div a {
+	text-decoration: none;
+	color: #fff;
+	font-size: small;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.services-list div:hover {
+	background: #ff004f;
+	transform: translateY(-10px);
+}
+
 /*----------------------PORTFOLIO-----------------------*/
 #portfolio {
 	padding: 0 0;
+	margin-top: 5%;
 }
 
 .portfolio-list {
@@ -250,6 +302,10 @@ nav ul li a:hover::after {
 
 /*----------------------CONTACT-----------------------*/
 
+#contact {
+	margin-top: 5%;
+}
+
 .contact-row-1 {
 	display: flex;
 	justify-content: space-between;
@@ -330,3 +386,22 @@ form .my-btn-skin {
 .copyright i {
 	color: #ff004f
 }
+
+/*----------------------CSS FOR SMALL SCREENS-----------------------*/
+@media only screen and (max-width: 600px) {
+	#header {
+		background-image: url(../asset/img/phone-background.png);
+
+	}
+	p {
+		width: 100%;
+	}
+	.header-text {
+		margin-top: 100%;
+		font-size: medium;
+	}
+	.header-text h1 {
+		font-size: large;
+	}
+}
+
