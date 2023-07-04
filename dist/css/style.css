@@ -6,7 +6,7 @@
 /*   By: jyao <jyao@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 16:49:01 by jyao              #+#    #+#             */
-/*   Updated: 2023/07/04 17:38:28 by jyao             ###   ########.fr       */
+/*   Updated: 2023/07/04 22:39:08 by jyao             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ body {
 #header {
 	width: 100%;
 	height: 100vh;
-	background-image: url(../asset/img/background.png);
+	background-image: url(../asset/img/background.jpeg);
 	background-size: cover;
 	background-position: center;
 }
@@ -82,7 +82,9 @@ nav ul li a:hover::after {
 
 .header-text {
 	font-size: xxx-large;
-	margin-top: 20%;
+	margin-top: 5%;
+	text-align: right;
+	text-align: top;
 }
 
 .header-text h1 {
@@ -128,7 +130,8 @@ nav ul li a:hover::after {
 
 .about-subtitles {
 	display: flex;
-	margin: 20px 0 40px;
+	margin: 60px 0 40px;
+	color: #fff;
 }
 
 .about-subtitles-link {
@@ -226,7 +229,7 @@ nav ul li a:hover::after {
 /*----------------------PORTFOLIO-----------------------*/
 #portfolio {
 	padding: 0 0;
-	margin-top: 5%;
+	margin-top: 10%;
 }
 
 .portfolio-list {
@@ -244,6 +247,7 @@ nav ul li a:hover::after {
 
 .portfolio-project img {
 	width: 100%;
+	height: 100%;
 	border-radius: 10px;
 	display: block;
 	transition: transform 0.5s;
@@ -412,8 +416,8 @@ form .my-btn-skin {
 }
 
 .accordion-list {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+	/* display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); */
 	grid-gap: 40px;
 	margin-top: 50px;
 }
@@ -424,6 +428,10 @@ form .my-btn-skin {
 	margin: 10% auto;
 }
 
+.accordion h1 {
+	text-align: center;
+}
+
 .accordion-item {
 	list-style: none;
 	width: 100%;
@@ -432,6 +440,12 @@ form .my-btn-skin {
 	border-radius: 8px;
 	box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 1.0), 
 				-6px -6px 10px -1px rgb(255, 255, 255, 0.1);
+}
+
+.accordion-item img {
+	width: 100%;
+	border-radius: 15px;
+	margin: auto;
 }
 
 .accordion-item-title {
