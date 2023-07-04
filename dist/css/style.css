@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   style.css                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jyao <jyao@student.42abudhabi.ae>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/04 16:49:01 by jyao              #+#    #+#             */
+/*   Updated: 2023/07/04 17:38:28 by jyao             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 * {
 	font-family: 'Poppings', sans-serif;
 	margin: 0;
@@ -387,21 +399,81 @@ form .my-btn-skin {
 	color: #ff004f
 }
 
-/*----------------------CSS FOR SMALL SCREENS-----------------------*/
-@media only screen and (max-width: 600px) {
-	#header {
-		background-image: url(../asset/img/phone-background.png);
-
-	}
-	p {
-		width: 100%;
-	}
-	.header-text {
-		margin-top: 100%;
-		font-size: medium;
-	}
-	.header-text h1 {
-		font-size: large;
-	}
+#success-msg {
+	color: #61b752;
+	margin-top: -40px;
+	display: block;
 }
 
+/*----------------------PORTFOLIO ACCORDION-----------------------*/
+
+#portfolio-page {
+	padding: 0 0;
+}
+
+.accordion-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+	grid-gap: 40px;
+	margin-top: 50px;
+}
+
+.accordion {
+	width: 90%;
+	max-width: 1000px;
+	margin: 10% auto;
+}
+
+.accordion-item {
+	list-style: none;
+	width: 100%;
+	margin: 30px;
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 1.0), 
+				-6px -6px 10px -1px rgb(255, 255, 255, 0.1);
+}
+
+.accordion-item-title {
+	padding: 0.5rem 3rem 0.5rem 1rem;
+	min-height: 3.5rem;
+	line-height: 1.25rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.accordion-item-title::before {
+	content: "\002B";
+	font-size: 1.5rem;
+	margin-right: 10px;
+	font-weight: 600;
+	transition: transform 0.2s ease-in-out;
+}
+
+.accordion-item-title.active::before {
+	/* content: "\2212"; */
+	transform: rotate(45deg);
+}
+
+.accordion-item-body {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+	color:#ababab;
+	padding: 1rem;
+	line-height: 1.5rem;
+	border-top: 1px solid;
+	border-image: linear-gradient(to right, transparent, #262626, transparent) 1;
+}
+
+.accordion-item-body-content .my-btn {
+	display: line-block;
+	margin-top: 2rem;
+	margin-bottom: 0;
+}
